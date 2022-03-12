@@ -1,11 +1,17 @@
 const imagesID = document.getElementById('images');
-const imgArray = [1, 3, 5,3, 23, 53,32];
+const imgArray = [ 
+'images/img5.jpg',
+'images/img2.jpg',
+'images/img3.jpg',
+'images/img4.jpg',
+'images/img6.jpg',
+'images/img.jpg',
+];
 let imgIndexNumber = 0;
 setInterval(() => {
-    imgIndexNumber++;
-    imagesID.setAttribute('src', imgArray[imgIndexNumber]);
     if(imgIndexNumber >= imgArray.length){
         imgIndexNumber = 0;
     }
-    console.log(imgIndexNumber);
-}, 2000);
+    imagesID.setAttribute('src', imgArray[imgIndexNumber]);
+    imgIndexNumber++;
+}, 1500);
